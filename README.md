@@ -83,7 +83,7 @@ Fitti is a social app that allows users to leave posts in the real world. Users 
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://imgur.com/vU7IShS" width=600>
+<img src="https://i.imgur.com/vU7IShS.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
