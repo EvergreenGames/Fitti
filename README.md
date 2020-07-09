@@ -85,17 +85,49 @@ Fitti is a social app that allows users to leave posts in the real world. Users 
 [Add picture of your hand sketched wireframes in this section]
 <img src="https://i.imgur.com/vU7IShS.jpg" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+#### Post
+| Property     | Type         | Description |
+| ------------ | ------------ | -------- |
+| objectID     | String       | Unique id for the post |
+| latitude     | Number       | location the post was made |
+| longitude    | Number       | location the post was made |
+| author       | Pointer:User | author of the post |
+| title        | Text         | title of the post |
+| image        | File         | image content (optional) |
+| text         | Text         | text content (optional) |
+| commentCount | Number       | number of comments |
+| likeCount    | Number       | number of likes |
+| createdAt    | DateTime     | date when the post was created |
+| updatedAt    | DateTime     | date when the post was last updated |
+
+#### Comment
+| Property  | Type         | Description |
+| --------- | ------------ | -------- |
+| objectID  | String       | Unique id for the post |
+| author    | Pointer:User | author of the comment |
+| text      | String       | contents of the comment |
+| createdAt | DateTime     | date when the comment was created |
+| updatedAt | DateTime     | date when the comment was last updated |
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Login
+    - (GET) Authenticate user
+    - (POST) Create new user
+- Feed
+    - (GET) Get posts for user's location
+    - (POST) Add like to post
+- Detail
+    - (POST) Add like to post
+    - (GET) Comments for post
+    - (POST) Create comment
+- Compose
+    - (POST) Create new post
+- Profile
+    - (UPDATE) Update user data
+
 
 [HackMD][https://hackmd.io/RKwKp1IjTAONKxIKAe_uPg]
