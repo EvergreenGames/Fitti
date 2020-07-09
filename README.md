@@ -130,4 +130,4 @@ Fitti is a social app that allows users to leave posts in the real world. Users 
     - (UPDATE) Update user data
 
 
-[HackMD][https://hackmd.io/RKwKp1IjTAONKxIKAe_uPg]
+[HackMD](https://hackmd.io/RKwKp1IjTAONKxIKAe_uPg)
