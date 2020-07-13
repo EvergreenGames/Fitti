@@ -33,6 +33,7 @@ Fitti is a social app that allows users to leave posts in the real world. Users 
 * Users can log out
 * Users can view their location on a map interface
 * Users can view posts made at their location
+* Posts are loaded based on radius from the user, or differently if the location is a landmark.
 * Users can make text posts to their current location
 * Users can upload image posts with their camera
 
