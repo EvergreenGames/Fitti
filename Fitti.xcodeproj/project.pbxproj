@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A30081F24BD4D8400B94DC5 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A30081E24BD4D8400B94DC5 /* TabBarController.m */; };
 		8A8FAC5424BD300300719ABB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC5324BD300300719ABB /* AppDelegate.m */; };
 		8A8FAC5724BD300300719ABB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC5624BD300300719ABB /* SceneDelegate.m */; };
 		8A8FAC5D24BD300300719ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8FAC5B24BD300300719ABB /* Main.storyboard */; };
@@ -16,6 +15,7 @@
 		8A8FAC6524BD300500719ABB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC6424BD300500719ABB /* main.m */; };
 		8A8FAC6F24BD300500719ABB /* FittiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC6E24BD300500719ABB /* FittiTests.m */; };
 		8A8FAC7A24BD300500719ABB /* FittiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC7924BD300500719ABB /* FittiUITests.m */; };
+		8AE6891324BE4600008D7C95 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6891224BE4600008D7C95 /* Post.m */; };
 		BB75BA737010DA604B0722E9 /* Pods_Fitti_FittiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370BF55E44B02E3577E54E31 /* Pods_Fitti_FittiUITests.framework */; };
 		F32DEBD478477339F869AF54 /* Pods_Fitti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992E7A95ACC398961503058F /* Pods_Fitti.framework */; };
 		FCB94DFDCACEE9265E958234 /* Pods_FittiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95E46F19353F3A3A2230832 /* Pods_FittiTests.framework */; };
@@ -43,8 +43,6 @@
 		370BF55E44B02E3577E54E31 /* Pods_Fitti_FittiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitti_FittiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		472DE8B6BA5C0A6B38B767A2 /* Pods-Fitti-FittiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti-FittiUITests.release.xcconfig"; path = "Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E8EB694581F7AB8C113079E /* Pods-Fitti-FittiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti-FittiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8A30081D24BD4D8400B94DC5 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
-		8A30081E24BD4D8400B94DC5 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		8A8FAC4F24BD300300719ABB /* Fitti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8FAC5224BD300300719ABB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A8FAC5324BD300300719ABB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +59,8 @@
 		8A8FAC7524BD300500719ABB /* FittiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FittiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8FAC7924BD300500719ABB /* FittiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FittiUITests.m; sourceTree = "<group>"; };
 		8A8FAC7B24BD300500719ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AE6891124BE4600008D7C95 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		8AE6891224BE4600008D7C95 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		926FBD4B7854F250D3046FB6 /* Pods-FittiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittiTests.debug.xcconfig"; path = "Target Support Files/Pods-FittiTests/Pods-FittiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95CA6E7721626EDED7E07567 /* Pods-FittiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittiTests.release.xcconfig"; path = "Target Support Files/Pods-FittiTests/Pods-FittiTests.release.xcconfig"; sourceTree = "<group>"; };
 		992E7A95ACC398961503058F /* Pods_Fitti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,8 +112,6 @@
 		8A30081C24BD4D5500B94DC5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8A30081D24BD4D8400B94DC5 /* TabBarController.h */,
-				8A30081E24BD4D8400B94DC5 /* TabBarController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -143,6 +141,7 @@
 		8A8FAC5124BD300300719ABB /* Fitti */ = {
 			isa = PBXGroup;
 			children = (
+				8AE6891024BE45D7008D7C95 /* Models */,
 				8A30081C24BD4D5500B94DC5 /* ViewControllers */,
 				8A8FAC5224BD300300719ABB /* AppDelegate.h */,
 				8A8FAC5324BD300300719ABB /* AppDelegate.m */,
@@ -173,6 +172,15 @@
 				8A8FAC7B24BD300500719ABB /* Info.plist */,
 			);
 			path = FittiUITests;
+			sourceTree = "<group>";
+		};
+		8AE6891024BE45D7008D7C95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AE6891124BE4600008D7C95 /* Post.h */,
+				8AE6891224BE4600008D7C95 /* Post.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A8EAB5AB99F792EDF6444A7D /* Frameworks */ = {
@@ -424,9 +432,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8FAC5424BD300300719ABB /* AppDelegate.m in Sources */,
-				8A30081F24BD4D8400B94DC5 /* TabBarController.m in Sources */,
 				8A8FAC6524BD300500719ABB /* main.m in Sources */,
 				8A8FAC5724BD300300719ABB /* SceneDelegate.m in Sources */,
+				8AE6891324BE4600008D7C95 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
