@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A30081F24BD4D8400B94DC5 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A30081E24BD4D8400B94DC5 /* TabBarController.m */; };
 		8A8FAC5424BD300300719ABB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC5324BD300300719ABB /* AppDelegate.m */; };
 		8A8FAC5724BD300300719ABB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC5624BD300300719ABB /* SceneDelegate.m */; };
-		8A8FAC5A24BD300300719ABB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC5924BD300300719ABB /* ViewController.m */; };
 		8A8FAC5D24BD300300719ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8FAC5B24BD300300719ABB /* Main.storyboard */; };
 		8A8FAC5F24BD300500719ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8FAC5E24BD300500719ABB /* Assets.xcassets */; };
 		8A8FAC6224BD300500719ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8FAC6024BD300500719ABB /* LaunchScreen.storyboard */; };
@@ -43,13 +43,13 @@
 		370BF55E44B02E3577E54E31 /* Pods_Fitti_FittiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitti_FittiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		472DE8B6BA5C0A6B38B767A2 /* Pods-Fitti-FittiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti-FittiUITests.release.xcconfig"; path = "Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E8EB694581F7AB8C113079E /* Pods-Fitti-FittiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti-FittiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A30081D24BD4D8400B94DC5 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		8A30081E24BD4D8400B94DC5 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		8A8FAC4F24BD300300719ABB /* Fitti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8FAC5224BD300300719ABB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A8FAC5324BD300300719ABB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8A8FAC5524BD300300719ABB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		8A8FAC5624BD300300719ABB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		8A8FAC5824BD300300719ABB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8A8FAC5924BD300300719ABB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A8FAC5C24BD300300719ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A8FAC5E24BD300500719ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A8FAC6124BD300500719ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,8 +106,16 @@
 				926FBD4B7854F250D3046FB6 /* Pods-FittiTests.debug.xcconfig */,
 				95CA6E7721626EDED7E07567 /* Pods-FittiTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8A30081C24BD4D5500B94DC5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A30081D24BD4D8400B94DC5 /* TabBarController.h */,
+				8A30081E24BD4D8400B94DC5 /* TabBarController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		8A8FAC4624BD300300719ABB = {
@@ -135,12 +143,11 @@
 		8A8FAC5124BD300300719ABB /* Fitti */ = {
 			isa = PBXGroup;
 			children = (
+				8A30081C24BD4D5500B94DC5 /* ViewControllers */,
 				8A8FAC5224BD300300719ABB /* AppDelegate.h */,
 				8A8FAC5324BD300300719ABB /* AppDelegate.m */,
 				8A8FAC5524BD300300719ABB /* SceneDelegate.h */,
 				8A8FAC5624BD300300719ABB /* SceneDelegate.m */,
-				8A8FAC5824BD300300719ABB /* ViewController.h */,
-				8A8FAC5924BD300300719ABB /* ViewController.m */,
 				8A8FAC5B24BD300300719ABB /* Main.storyboard */,
 				8A8FAC5E24BD300500719ABB /* Assets.xcassets */,
 				8A8FAC6024BD300500719ABB /* LaunchScreen.storyboard */,
@@ -416,8 +423,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A8FAC5A24BD300300719ABB /* ViewController.m in Sources */,
 				8A8FAC5424BD300300719ABB /* AppDelegate.m in Sources */,
+				8A30081F24BD4D8400B94DC5 /* TabBarController.m in Sources */,
 				8A8FAC6524BD300500719ABB /* main.m in Sources */,
 				8A8FAC5724BD300300719ABB /* SceneDelegate.m in Sources */,
 			);
