@@ -16,6 +16,9 @@
 		8A8FAC6524BD300500719ABB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC6424BD300500719ABB /* main.m */; };
 		8A8FAC6F24BD300500719ABB /* FittiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC6E24BD300500719ABB /* FittiTests.m */; };
 		8A8FAC7A24BD300500719ABB /* FittiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC7924BD300500719ABB /* FittiUITests.m */; };
+		BB75BA737010DA604B0722E9 /* Pods_Fitti_FittiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370BF55E44B02E3577E54E31 /* Pods_Fitti_FittiUITests.framework */; };
+		F32DEBD478477339F869AF54 /* Pods_Fitti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992E7A95ACC398961503058F /* Pods_Fitti.framework */; };
+		FCB94DFDCACEE9265E958234 /* Pods_FittiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95E46F19353F3A3A2230832 /* Pods_FittiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F28DAD07CB48DDD02C293D0 /* Pods-Fitti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti.debug.xcconfig"; path = "Target Support Files/Pods-Fitti/Pods-Fitti.debug.xcconfig"; sourceTree = "<group>"; };
+		370BF55E44B02E3577E54E31 /* Pods_Fitti_FittiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitti_FittiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		472DE8B6BA5C0A6B38B767A2 /* Pods-Fitti-FittiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti-FittiUITests.release.xcconfig"; path = "Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4E8EB694581F7AB8C113079E /* Pods-Fitti-FittiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti-FittiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A8FAC4F24BD300300719ABB /* Fitti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8FAC5224BD300300719ABB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A8FAC5324BD300300719ABB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +61,11 @@
 		8A8FAC7524BD300500719ABB /* FittiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FittiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8FAC7924BD300500719ABB /* FittiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FittiUITests.m; sourceTree = "<group>"; };
 		8A8FAC7B24BD300500719ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		926FBD4B7854F250D3046FB6 /* Pods-FittiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittiTests.debug.xcconfig"; path = "Target Support Files/Pods-FittiTests/Pods-FittiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95CA6E7721626EDED7E07567 /* Pods-FittiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittiTests.release.xcconfig"; path = "Target Support Files/Pods-FittiTests/Pods-FittiTests.release.xcconfig"; sourceTree = "<group>"; };
+		992E7A95ACC398961503058F /* Pods_Fitti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1897789169BD8742DC2776 /* Pods-Fitti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti.release.xcconfig"; path = "Target Support Files/Pods-Fitti/Pods-Fitti.release.xcconfig"; sourceTree = "<group>"; };
+		F95E46F19353F3A3A2230832 /* Pods_FittiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FittiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32DEBD478477339F869AF54 /* Pods_Fitti.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB94DFDCACEE9265E958234 /* Pods_FittiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +89,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB75BA737010DA604B0722E9 /* Pods_Fitti_FittiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18AE81603B8C1462FE3391CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F28DAD07CB48DDD02C293D0 /* Pods-Fitti.debug.xcconfig */,
+				BC1897789169BD8742DC2776 /* Pods-Fitti.release.xcconfig */,
+				4E8EB694581F7AB8C113079E /* Pods-Fitti-FittiUITests.debug.xcconfig */,
+				472DE8B6BA5C0A6B38B767A2 /* Pods-Fitti-FittiUITests.release.xcconfig */,
+				926FBD4B7854F250D3046FB6 /* Pods-FittiTests.debug.xcconfig */,
+				95CA6E7721626EDED7E07567 /* Pods-FittiTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8A8FAC4624BD300300719ABB = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +117,8 @@
 				8A8FAC6D24BD300500719ABB /* FittiTests */,
 				8A8FAC7824BD300500719ABB /* FittiUITests */,
 				8A8FAC5024BD300300719ABB /* Products */,
+				18AE81603B8C1462FE3391CB /* Pods */,
+				A8EAB5AB99F792EDF6444A7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +168,16 @@
 			path = FittiUITests;
 			sourceTree = "<group>";
 		};
+		A8EAB5AB99F792EDF6444A7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				992E7A95ACC398961503058F /* Pods_Fitti.framework */,
+				370BF55E44B02E3577E54E31 /* Pods_Fitti_FittiUITests.framework */,
+				F95E46F19353F3A3A2230832 /* Pods_FittiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A8FAC7E24BD300500719ABB /* Build configuration list for PBXNativeTarget "Fitti" */;
 			buildPhases = (
+				E51E3972F376DE2F2E6870A5 /* [CP] Check Pods Manifest.lock */,
 				8A8FAC4B24BD300300719ABB /* Sources */,
 				8A8FAC4C24BD300300719ABB /* Frameworks */,
 				8A8FAC4D24BD300300719ABB /* Resources */,
+				2D2CB3CE22CE8F2AF8F0E3C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A8FAC8124BD300500719ABB /* Build configuration list for PBXNativeTarget "FittiTests" */;
 			buildPhases = (
+				A8D68323B9695790D4592377 /* [CP] Check Pods Manifest.lock */,
 				8A8FAC6624BD300500719ABB /* Sources */,
 				8A8FAC6724BD300500719ABB /* Frameworks */,
 				8A8FAC6824BD300500719ABB /* Resources */,
@@ -179,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A8FAC8424BD300500719ABB /* Build configuration list for PBXNativeTarget "FittiUITests" */;
 			buildPhases = (
+				8D2EAA95DB94932FF69BD0E6 /* [CP] Check Pods Manifest.lock */,
 				8A8FAC7124BD300500719ABB /* Sources */,
 				8A8FAC7224BD300500719ABB /* Frameworks */,
 				8A8FAC7324BD300500719ABB /* Resources */,
+				83AFF70866A60A773799600D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +307,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D2CB3CE22CE8F2AF8F0E3C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fitti/Pods-Fitti-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fitti/Pods-Fitti-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fitti/Pods-Fitti-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83AFF70866A60A773799600D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D2EAA95DB94932FF69BD0E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fitti-FittiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8D68323B9695790D4592377 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FittiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E51E3972F376DE2F2E6870A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fitti-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A8FAC4B24BD300300719ABB /* Sources */ = {
@@ -437,6 +586,7 @@
 		};
 		8A8FAC7F24BD300500719ABB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F28DAD07CB48DDD02C293D0 /* Pods-Fitti.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +604,7 @@
 		};
 		8A8FAC8024BD300500719ABB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC1897789169BD8742DC2776 /* Pods-Fitti.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +622,7 @@
 		};
 		8A8FAC8224BD300500719ABB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 926FBD4B7854F250D3046FB6 /* Pods-FittiTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +643,7 @@
 		};
 		8A8FAC8324BD300500719ABB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95CA6E7721626EDED7E07567 /* Pods-FittiTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -511,6 +664,7 @@
 		};
 		8A8FAC8524BD300500719ABB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8EB694581F7AB8C113079E /* Pods-Fitti-FittiUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMPSKTZRRR;
@@ -529,6 +683,7 @@
 		};
 		8A8FAC8624BD300500719ABB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 472DE8B6BA5C0A6B38B767A2 /* Pods-Fitti-FittiUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HMPSKTZRRR;
