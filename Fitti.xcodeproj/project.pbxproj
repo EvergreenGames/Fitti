@@ -16,6 +16,11 @@
 		8A8FAC6F24BD300500719ABB /* FittiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC6E24BD300500719ABB /* FittiTests.m */; };
 		8A8FAC7A24BD300500719ABB /* FittiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC7924BD300500719ABB /* FittiUITests.m */; };
 		8AE6891324BE4600008D7C95 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6891224BE4600008D7C95 /* Post.m */; };
+		8AE6891624BE5185008D7C95 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6891524BE5185008D7C95 /* LoginViewController.m */; };
+		8AE6891924BFAE77008D7C95 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6891824BFAE77008D7C95 /* HomeViewController.m */; };
+		8AE6891F24BFAF11008D7C95 /* ErrorMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6891E24BFAF11008D7C95 /* ErrorMessageView.m */; };
+		8AE6892624C0F564008D7C95 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AE6892524C0F564008D7C95 /* CoreLocation.framework */; };
+		8AE6892924C0F574008D7C95 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6892824C0F574008D7C95 /* LocationManager.m */; };
 		BB75BA737010DA604B0722E9 /* Pods_Fitti_FittiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370BF55E44B02E3577E54E31 /* Pods_Fitti_FittiUITests.framework */; };
 		F32DEBD478477339F869AF54 /* Pods_Fitti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992E7A95ACC398961503058F /* Pods_Fitti.framework */; };
 		FCB94DFDCACEE9265E958234 /* Pods_FittiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95E46F19353F3A3A2230832 /* Pods_FittiTests.framework */; };
@@ -61,6 +66,15 @@
 		8A8FAC7B24BD300500719ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AE6891124BE4600008D7C95 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		8AE6891224BE4600008D7C95 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		8AE6891424BE5185008D7C95 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8AE6891524BE5185008D7C95 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8AE6891724BFAE77008D7C95 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8AE6891824BFAE77008D7C95 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		8AE6891D24BFAF11008D7C95 /* ErrorMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorMessageView.h; sourceTree = "<group>"; };
+		8AE6891E24BFAF11008D7C95 /* ErrorMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorMessageView.m; sourceTree = "<group>"; };
+		8AE6892524C0F564008D7C95 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8AE6892724C0F574008D7C95 /* LocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		8AE6892824C0F574008D7C95 /* LocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		926FBD4B7854F250D3046FB6 /* Pods-FittiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittiTests.debug.xcconfig"; path = "Target Support Files/Pods-FittiTests/Pods-FittiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95CA6E7721626EDED7E07567 /* Pods-FittiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FittiTests.release.xcconfig"; path = "Target Support Files/Pods-FittiTests/Pods-FittiTests.release.xcconfig"; sourceTree = "<group>"; };
 		992E7A95ACC398961503058F /* Pods_Fitti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE6892624C0F564008D7C95 /* CoreLocation.framework in Frameworks */,
 				F32DEBD478477339F869AF54 /* Pods_Fitti.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +127,10 @@
 		8A30081C24BD4D5500B94DC5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8AE6891724BFAE77008D7C95 /* HomeViewController.h */,
+				8AE6891824BFAE77008D7C95 /* HomeViewController.m */,
+				8AE6891424BE5185008D7C95 /* LoginViewController.h */,
+				8AE6891524BE5185008D7C95 /* LoginViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -152,6 +171,10 @@
 				8A8FAC6024BD300500719ABB /* LaunchScreen.storyboard */,
 				8A8FAC6324BD300500719ABB /* Info.plist */,
 				8A8FAC6424BD300500719ABB /* main.m */,
+				8AE6891D24BFAF11008D7C95 /* ErrorMessageView.h */,
+				8AE6891E24BFAF11008D7C95 /* ErrorMessageView.m */,
+				8AE6892724C0F574008D7C95 /* LocationManager.h */,
+				8AE6892824C0F574008D7C95 /* LocationManager.m */,
 			);
 			path = Fitti;
 			sourceTree = "<group>";
@@ -186,6 +209,7 @@
 		A8EAB5AB99F792EDF6444A7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AE6892524C0F564008D7C95 /* CoreLocation.framework */,
 				992E7A95ACC398961503058F /* Pods_Fitti.framework */,
 				370BF55E44B02E3577E54E31 /* Pods_Fitti_FittiUITests.framework */,
 				F95E46F19353F3A3A2230832 /* Pods_FittiTests.framework */,
@@ -431,10 +455,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE6892924C0F574008D7C95 /* LocationManager.m in Sources */,
 				8A8FAC5424BD300300719ABB /* AppDelegate.m in Sources */,
 				8A8FAC6524BD300500719ABB /* main.m in Sources */,
 				8A8FAC5724BD300300719ABB /* SceneDelegate.m in Sources */,
 				8AE6891324BE4600008D7C95 /* Post.m in Sources */,
+				8AE6891624BE5185008D7C95 /* LoginViewController.m in Sources */,
+				8AE6891924BFAE77008D7C95 /* HomeViewController.m in Sources */,
+				8AE6891F24BFAF11008D7C95 /* ErrorMessageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

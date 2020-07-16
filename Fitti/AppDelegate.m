@@ -20,7 +20,7 @@
     
     ParseClientConfiguration* config = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
         configuration.applicationId = @"fitti_appid";
-        configuration.server = @"http://fitti-app.herokuapp.com/parse";
+        configuration.server = @"https://fitti-app.herokuapp.com/parse";
     }];
     [Parse initializeWithConfiguration:config];
     
