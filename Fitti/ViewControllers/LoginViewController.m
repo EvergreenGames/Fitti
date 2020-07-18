@@ -25,6 +25,7 @@
     // Do any additional setup after loading the view.
     
     //TESTING
+    //TODO: Present this in a better way
     [LocationManager.sharedManager.locManager requestWhenInUseAuthorization];
 }
 
