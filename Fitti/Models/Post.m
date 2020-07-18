@@ -8,6 +8,7 @@
 
 #import "Post.h"
 #import <Parse/Parse.h>
+#import "LocationManager.h"
 
 @implementation Post
 
@@ -24,14 +25,14 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        self.latitude = @(0);
-        self.longitude = @(0);
+        self.latitude = LocationManager.sharedManager.currentLocation.coordinate.latitude;
+        self.longitude = LocationManager.sharedManager.currentLocation.coordinate.longitude;
         
         self.author = PFUser.currentUser;
         self.title = @"";
         self.textContent = @"";
         self.image = nil;
-        self.postType = @"text";
+        self.postType = @"text"; //just to be safe
     }
     return self;
 }

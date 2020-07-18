@@ -15,6 +15,7 @@
 		8A8FAC6524BD300500719ABB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC6424BD300500719ABB /* main.m */; };
 		8A8FAC6F24BD300500719ABB /* FittiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC6E24BD300500719ABB /* FittiTests.m */; };
 		8A8FAC7A24BD300500719ABB /* FittiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FAC7924BD300500719ABB /* FittiUITests.m */; };
+		8AAF69B924C3AD5400C095F9 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF69B824C3AD5400C095F9 /* ComposeViewController.m */; };
 		8AE6891324BE4600008D7C95 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6891224BE4600008D7C95 /* Post.m */; };
 		8AE6891624BE5185008D7C95 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6891524BE5185008D7C95 /* LoginViewController.m */; };
 		8AE6891924BFAE77008D7C95 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6891824BFAE77008D7C95 /* HomeViewController.m */; };
@@ -64,6 +65,8 @@
 		8A8FAC7524BD300500719ABB /* FittiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FittiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8FAC7924BD300500719ABB /* FittiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FittiUITests.m; sourceTree = "<group>"; };
 		8A8FAC7B24BD300500719ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AAF69B724C3AD5400C095F9 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		8AAF69B824C3AD5400C095F9 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		8AE6891124BE4600008D7C95 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		8AE6891224BE4600008D7C95 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		8AE6891424BE5185008D7C95 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 		8A30081C24BD4D5500B94DC5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8AAF69B724C3AD5400C095F9 /* ComposeViewController.h */,
+				8AAF69B824C3AD5400C095F9 /* ComposeViewController.m */,
 				8AE6891724BFAE77008D7C95 /* HomeViewController.h */,
 				8AE6891824BFAE77008D7C95 /* HomeViewController.m */,
 				8AE6891424BE5185008D7C95 /* LoginViewController.h */,
@@ -458,6 +463,7 @@
 				8AE6892924C0F574008D7C95 /* LocationManager.m in Sources */,
 				8A8FAC5424BD300300719ABB /* AppDelegate.m in Sources */,
 				8A8FAC6524BD300500719ABB /* main.m in Sources */,
+				8AAF69B924C3AD5400C095F9 /* ComposeViewController.m in Sources */,
 				8A8FAC5724BD300300719ABB /* SceneDelegate.m in Sources */,
 				8AE6891324BE4600008D7C95 /* Post.m in Sources */,
 				8AE6891624BE5185008D7C95 /* LoginViewController.m in Sources */,
