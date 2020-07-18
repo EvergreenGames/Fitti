@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "SceneDelegate.h"
 #import <Parse/Parse.h>
+#import "LocationManager.h"
 
 @interface LoginViewController ()
 
@@ -22,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //TESTING
+    [LocationManager.sharedManager.locManager requestWhenInUseAuthorization];
 }
 
 - (IBAction)loginAction:(id)sender {
@@ -30,6 +34,9 @@
 
 - (IBAction)registerAction:(id)sender {
     [self registerUser];
+}
+- (IBAction)dismissKeyboardAction:(id)sender {
+    [self.view endEditing:YES];
 }
 
 - (void)registerUser {

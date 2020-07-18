@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "SceneDelegate.h"
 #import "ErrorMessageView.h"
+#import "LocationManager.h"
 #import <Parse/Parse.h>
 
 @interface HomeViewController ()
@@ -19,7 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [LocationManager startUpdatingLocation];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        self.navigationItem.title = [LocationManager sharedManager].currentPlacemark.name;
+    }];
 }
 - (IBAction)logoutAction:(id)sender {
     [self logoutUser];

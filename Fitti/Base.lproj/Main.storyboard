@@ -52,7 +52,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CHs-nF-QQL" appends="YES" id="G4L-e7-TcJ"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="passwordField" destination="eU9-4z-zFf" id="6lf-VM-Yiz"/>
@@ -60,6 +64,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CHs-nF-QQL">
+                    <connections>
+                        <action selector="dismissKeyboardAction:" destination="BYZ-38-t0r" id="87T-Jn-Ngr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
