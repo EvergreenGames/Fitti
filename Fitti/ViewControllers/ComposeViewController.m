@@ -7,6 +7,7 @@
 //
 
 #import "ComposeViewController.h"
+#import "LocationManager.h"
 #import "Post.h"
 
 @interface ComposeViewController ()
@@ -41,8 +42,12 @@
 
 - (void)createPostWithCompletion:(PFBooleanResultBlock)completion {
     Post* post = [Post new];
+    post.location = [PFGeoPoint geoPointWithLocation:LocationManager.sharedManager.currentLocation];
+    post.author = PFUser.currentUser;
+    
     post.title = self.titleField.text;
     post.textContent = self.contentField.text;
+    post.image = nil;
     post.postType = @"text";
     
     [post saveInBackgroundWithBlock:completion];

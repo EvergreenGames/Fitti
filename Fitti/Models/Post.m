@@ -21,20 +21,6 @@
 @dynamic image;
 @dynamic postType;
 
-- (instancetype)init{
-    self = [super init];
-    if (self) {
-        self.location = [PFGeoPoint geoPointWithLocation:LocationManager.sharedManager.currentLocation];
-        
-        self.author = PFUser.currentUser;
-        self.title = @"";
-        self.textContent = @"";
-        self.image = nil;
-        self.postType = @"text"; //just to be safe
-    }
-    return self;
-}
-
 + (NSString *)parseClassName{
     return @"Post";
 }
