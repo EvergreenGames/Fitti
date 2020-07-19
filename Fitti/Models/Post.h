@@ -13,8 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Post : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) NSString* postID;
-@property (nonatomic) double latitude;
-@property (nonatomic) double longitude;
+@property (nonatomic) PFGeoPoint* location;
 
 @property (nonatomic, strong) PFUser* author;
 @property (nonatomic, strong) NSString* title;

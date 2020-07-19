@@ -13,8 +13,7 @@
 @implementation Post
 
 @dynamic postID;
-@dynamic latitude;
-@dynamic longitude;
+@dynamic location;
 
 @dynamic author;
 @dynamic title;
@@ -25,8 +24,7 @@
 - (instancetype)init{
     self = [super init];
     if (self) {
-        self.latitude = LocationManager.sharedManager.currentLocation.coordinate.latitude;
-        self.longitude = LocationManager.sharedManager.currentLocation.coordinate.longitude;
+        self.location = [PFGeoPoint geoPointWithLocation:LocationManager.sharedManager.currentLocation];
         
         self.author = PFUser.currentUser;
         self.title = @"";
