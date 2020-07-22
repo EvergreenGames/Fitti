@@ -154,7 +154,7 @@
                                             <outlet property="contentLabel" destination="3YK-UK-M2M" id="eHN-ar-f4X"/>
                                             <outlet property="titleLabel" destination="gLd-dZ-DAN" id="L8I-hI-hhz"/>
                                             <outlet property="usernameLabel" destination="eIZ-wI-b8T" id="D7S-VQ-bzb"/>
-                                            <segue destination="Tbd-8a-Sg7" kind="show" id="lkt-99-cFQ"/>
+                                            <segue destination="Tbd-8a-Sg7" kind="show" identifier="DetailSegue" id="lkt-99-cFQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -184,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="2939.130434782609" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="ucw-JF-HjN">
             <objects>
-                <viewController id="Tbd-8a-Sg7" sceneMemberID="viewController">
+                <viewController id="Tbd-8a-Sg7" customClass="DetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="duQ-5O-V4N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,6 +227,11 @@
                         <viewLayoutGuide key="safeArea" id="KXT-g8-Ggu"/>
                     </view>
                     <navigationItem key="navigationItem" id="frn-Rg-lqd"/>
+                    <connections>
+                        <outlet property="contentLabel" destination="kWo-Fo-nFg" id="ebz-M8-6b5"/>
+                        <outlet property="titleLabel" destination="6eO-xY-RY2" id="Pkf-OX-cdV"/>
+                        <outlet property="usernameLabel" destination="LXI-cy-pVW" id="Bhk-HC-0NB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tuf-uV-0bA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,20 +270,34 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6iF-3J-mfq">
-                                <rect key="frame" x="20" y="126" width="374" height="770"/>
+                                <rect key="frame" x="20" y="255" width="374" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ADs-ar-be8">
+                                <rect key="frame" x="20" y="126" width="121" height="121"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="Vi1-2k-hnh"/>
+                                    <constraint firstAttribute="height" constant="121" id="hir-ZQ-HjR"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OIR-4X-uO3" appends="YES" id="ceC-7L-54K"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="6iF-3J-mfq" secondAttribute="bottom" id="2Eo-cB-sEe"/>
+                            <constraint firstItem="6iF-3J-mfq" firstAttribute="top" secondItem="ADs-ar-be8" secondAttribute="bottom" constant="8" id="Fhr-6d-ovg"/>
                             <constraint firstItem="CYm-rd-HoE" firstAttribute="leading" secondItem="2DC-0i-QKt" secondAttribute="leading" constant="20" id="PEP-5s-dQz"/>
                             <constraint firstItem="CYm-rd-HoE" firstAttribute="top" secondItem="2DC-0i-QKt" secondAttribute="top" constant="8" id="bxm-6W-hNq"/>
+                            <constraint firstItem="ADs-ar-be8" firstAttribute="top" secondItem="CYm-rd-HoE" secondAttribute="bottom" constant="8" id="dIM-yW-szU"/>
+                            <constraint firstItem="ADs-ar-be8" firstAttribute="leading" secondItem="2DC-0i-QKt" secondAttribute="leading" constant="20" id="fxX-C2-Eie"/>
                             <constraint firstItem="2DC-0i-QKt" firstAttribute="trailing" secondItem="CYm-rd-HoE" secondAttribute="trailing" constant="20" id="htn-om-uFv"/>
-                            <constraint firstItem="6iF-3J-mfq" firstAttribute="top" secondItem="CYm-rd-HoE" secondAttribute="bottom" constant="8" id="vFV-2e-LMC"/>
                             <constraint firstItem="6iF-3J-mfq" firstAttribute="leading" secondItem="2DC-0i-QKt" secondAttribute="leading" constant="20" id="w45-ts-M8R"/>
                             <constraint firstItem="2DC-0i-QKt" firstAttribute="trailing" secondItem="6iF-3J-mfq" secondAttribute="trailing" constant="20" id="yS5-G5-gbw"/>
                         </constraints>
@@ -298,10 +317,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contentField" destination="6iF-3J-mfq" id="nOu-SQ-VIH"/>
+                        <outlet property="contentImageView" destination="ADs-ar-be8" id="qNk-dK-MHw"/>
                         <outlet property="titleField" destination="CYm-rd-HoE" id="i5d-Zd-9zY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67W-lM-ENX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OIR-4X-uO3">
+                    <connections>
+                        <action selector="chooseImageAction:" destination="56W-vQ-Qnb" id="9oo-6k-24J"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2913.04347826087" y="929.46428571428567"/>
         </scene>

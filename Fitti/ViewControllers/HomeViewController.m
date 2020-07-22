@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "DetailsViewController.h"
 #import "SceneDelegate.h"
 #import "ErrorMessageView.h"
 #import "LocationManager.h"
@@ -42,6 +43,13 @@
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    if (indexPath) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:animated];
+    }
+}
+
 - (IBAction)logoutAction:(id)sender {
     [self logoutUser];
 }
@@ -71,7 +79,7 @@
 - (void)loadPostsWithCompletion:(void (^)(void))completion{
     PFQuery* query = [Post query];
     [query whereKey:@"location" nearGeoPoint:[PFGeoPoint geoPointWithLocation:self.viewLocation]];
-    [query orderByDescending:@"createdAt"];
+    //[query orderByDescending:@"createdAt"];
     [query includeKey:@"author"];
     query.limit = 20;
     
@@ -99,14 +107,18 @@
     return cell;
 };
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"DetailSegue"]){
+        UITableViewCell* sourceCell = sender;
+        NSIndexPath* sourceIndex = [self.tableView indexPathForCell:sourceCell];
+        
+        DetailsViewController* detailsController = [segue destinationViewController];
+        detailsController.post = self.posts[sourceIndex.row];
+    }
 }
-*/
+
 
 @end

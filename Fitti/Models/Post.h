@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) PFFileObject* image;
 @property (nonatomic, strong) NSString* postType; //"text" or "image"
 
++ (PFFileObject*)getPFFileFromImage:(UIImage* _Nullable)image;
+
 @end
 
 NS_ASSUME_NONNULL_END
