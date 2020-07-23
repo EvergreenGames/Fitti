@@ -207,6 +207,7 @@
                                             <outlet property="imageAspectConstraint" destination="kIF-rQ-XKR" id="dFg-BY-1HJ"/>
                                             <outlet property="titleLabel" destination="vV2-7d-BUh" id="6ry-Xf-C7e"/>
                                             <outlet property="usernameLabel" destination="zIS-OB-W3c" id="v2M-28-7ls"/>
+                                            <segue destination="Tbd-8a-Sg7" kind="show" identifier="DetailSegue" id="DUj-Yh-Ie7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -251,14 +252,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWo-Fo-nFg">
-                                <rect key="frame" x="20" y="128" width="374" height="81.5"/>
+                                <rect key="frame" x="20" y="128" width="374" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="zAt-Gb-DzY"/>
+                                </constraints>
                                 <string key="text">This is a preview of the post's content. It could probably span around three or so lines. Actually, no. It cannot have more than three lines. Any more than that will be truncated.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aMb-yu-W42" customClass="PFImageView">
+                                <rect key="frame" x="20" y="128" width="374" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="GzW-cB-Bba"/>
+                                    <constraint firstAttribute="width" secondItem="aMb-yu-W42" secondAttribute="height" multiplier="1:1" priority="999" id="KGf-DU-yzv"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXI-cy-pVW">
-                                <rect key="frame" x="20" y="217.5" width="374" height="18"/>
+                                <rect key="frame" x="20" y="136" width="374" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -266,12 +277,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="aMb-yu-W42" firstAttribute="top" secondItem="kWo-Fo-nFg" secondAttribute="bottom" id="4Xf-Ft-zf5"/>
                             <constraint firstItem="kWo-Fo-nFg" firstAttribute="leading" secondItem="KXT-g8-Ggu" secondAttribute="leading" constant="20" id="NZm-6v-lde"/>
                             <constraint firstItem="KXT-g8-Ggu" firstAttribute="trailing" secondItem="LXI-cy-pVW" secondAttribute="trailing" constant="20" id="Pu5-3e-hLW"/>
                             <constraint firstItem="LXI-cy-pVW" firstAttribute="leading" secondItem="KXT-g8-Ggu" secondAttribute="leading" constant="20" id="TeY-MK-ZSz"/>
                             <constraint firstItem="kWo-Fo-nFg" firstAttribute="top" secondItem="6eO-xY-RY2" secondAttribute="bottom" constant="8" id="eoD-JT-nRV"/>
+                            <constraint firstItem="KXT-g8-Ggu" firstAttribute="trailing" secondItem="aMb-yu-W42" secondAttribute="trailing" constant="20" id="exT-bI-p6q"/>
                             <constraint firstItem="6eO-xY-RY2" firstAttribute="leading" secondItem="KXT-g8-Ggu" secondAttribute="leading" constant="20" id="gIe-dx-uPz"/>
-                            <constraint firstItem="LXI-cy-pVW" firstAttribute="top" secondItem="kWo-Fo-nFg" secondAttribute="bottom" constant="8" id="jdR-2I-OeU"/>
+                            <constraint firstItem="aMb-yu-W42" firstAttribute="leading" secondItem="KXT-g8-Ggu" secondAttribute="leading" constant="20" id="irD-K9-LNm"/>
+                            <constraint firstItem="LXI-cy-pVW" firstAttribute="top" secondItem="aMb-yu-W42" secondAttribute="bottom" constant="8" id="l9M-kW-zDr"/>
                             <constraint firstItem="KXT-g8-Ggu" firstAttribute="trailing" secondItem="6eO-xY-RY2" secondAttribute="trailing" constant="20" id="wVn-Ro-kRF"/>
                             <constraint firstItem="KXT-g8-Ggu" firstAttribute="trailing" secondItem="kWo-Fo-nFg" secondAttribute="trailing" constant="20" id="x5N-WB-iG9"/>
                             <constraint firstItem="6eO-xY-RY2" firstAttribute="top" secondItem="KXT-g8-Ggu" secondAttribute="top" constant="8" id="yDH-zP-g3y"/>
@@ -280,7 +294,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="frn-Rg-lqd"/>
                     <connections>
+                        <outlet property="contentImageView" destination="aMb-yu-W42" id="KZY-Jf-jyg"/>
                         <outlet property="contentLabel" destination="kWo-Fo-nFg" id="ebz-M8-6b5"/>
+                        <outlet property="imageAspectConstraint" destination="KGf-DU-yzv" id="ng1-D3-BiF"/>
+                        <outlet property="imageHeightConstraint" destination="GzW-cB-Bba" id="C7e-5O-aAn"/>
+                        <outlet property="textHeightConstraint" destination="zAt-Gb-DzY" id="Sfq-dP-PoM"/>
                         <outlet property="titleLabel" destination="6eO-xY-RY2" id="Pkf-OX-cdV"/>
                         <outlet property="usernameLabel" destination="LXI-cy-pVW" id="Bhk-HC-0NB"/>
                     </connections>
@@ -421,6 +439,9 @@
             <point key="canvasLocation" x="2002.8985507246377" y="929.46428571428567"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DUj-Yh-Ie7"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="plus" catalog="system" width="128" height="113"/>
