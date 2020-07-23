@@ -52,6 +52,7 @@
     post.postType = @"text";
     if(self.contentImageView.image != nil){
         post.image = [Post getPFFileFromImage:self.contentImageView.image];
+        post.aspectRatio = self.contentImageView.image.size.width/self.contentImageView.image.size.height;
         post.postType = @"image";
     }
     

@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSString* textContent;
 @property (nonatomic, strong, nullable) PFFileObject* image;
+@property (nonatomic) float aspectRatio;
 @property (nonatomic, strong) NSString* postType; //"text" or "image"
 
 + (PFFileObject*)getPFFileFromImage:(UIImage* _Nullable)image;

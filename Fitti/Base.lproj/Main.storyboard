@@ -110,7 +110,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextTextPostCell" rowHeight="149" id="69t-ih-3XE" userLabel="TextPostCell" customClass="TextPostCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextPostCell" rowHeight="149" id="69t-ih-3XE" userLabel="TextPostCell" customClass="TextPostCell">
                                         <rect key="frame" x="0.0" y="28" width="414" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="69t-ih-3XE" id="40L-NX-RZm">
@@ -155,6 +155,58 @@
                                             <outlet property="titleLabel" destination="gLd-dZ-DAN" id="L8I-hI-hhz"/>
                                             <outlet property="usernameLabel" destination="eIZ-wI-b8T" id="D7S-VQ-bzb"/>
                                             <segue destination="Tbd-8a-Sg7" kind="show" identifier="DetailSegue" id="lkt-99-cFQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagePostCell" id="5GZ-Ru-yXc" customClass="ImagePostCell">
+                                        <rect key="frame" x="0.0" y="177" width="414" height="463"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5GZ-Ru-yXc" id="UtB-2z-oTv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="This is the Post Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV2-7d-BUh">
+                                                    <rect key="frame" x="20" y="11" width="374" height="24.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="oNF-tS-gtl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIS-OB-W3c">
+                                                    <rect key="frame" x="20" y="425.5" width="374" height="18.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18.5" id="xrf-PH-Umh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="753" translatesAutoresizingMaskIntoConstraints="NO" id="QM1-ie-ura" customClass="PFImageView">
+                                                    <rect key="frame" x="20" y="43.5" width="374" height="374"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="QM1-ie-ura" secondAttribute="height" multiplier="1:1" id="kIF-rQ-XKR"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QM1-ie-ura" firstAttribute="top" secondItem="vV2-7d-BUh" secondAttribute="bottom" constant="8" id="6bh-MY-tZJ"/>
+                                                <constraint firstItem="vV2-7d-BUh" firstAttribute="leading" secondItem="UtB-2z-oTv" secondAttribute="leadingMargin" id="7p0-0t-egJ"/>
+                                                <constraint firstItem="zIS-OB-W3c" firstAttribute="leading" secondItem="UtB-2z-oTv" secondAttribute="leadingMargin" id="G6k-v1-LVr"/>
+                                                <constraint firstItem="QM1-ie-ura" firstAttribute="leading" secondItem="UtB-2z-oTv" secondAttribute="leadingMargin" id="Guk-ov-8i6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zIS-OB-W3c" secondAttribute="bottom" constant="8" id="KYH-YV-opt"/>
+                                                <constraint firstItem="vV2-7d-BUh" firstAttribute="trailing" secondItem="UtB-2z-oTv" secondAttribute="trailingMargin" id="MnZ-vK-Cbg"/>
+                                                <constraint firstItem="QM1-ie-ura" firstAttribute="trailing" secondItem="UtB-2z-oTv" secondAttribute="trailingMargin" id="VIB-MN-udY"/>
+                                                <constraint firstItem="zIS-OB-W3c" firstAttribute="top" secondItem="QM1-ie-ura" secondAttribute="bottom" constant="8" id="XuF-qZ-Se2"/>
+                                                <constraint firstItem="zIS-OB-W3c" firstAttribute="trailing" secondItem="UtB-2z-oTv" secondAttribute="trailingMargin" id="fpb-xG-7dK"/>
+                                                <constraint firstItem="vV2-7d-BUh" firstAttribute="top" secondItem="UtB-2z-oTv" secondAttribute="topMargin" id="pPi-9c-myi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentImageView" destination="QM1-ie-ura" id="pR6-og-V0b"/>
+                                            <outlet property="imageAspectConstraint" destination="kIF-rQ-XKR" id="dFg-BY-1HJ"/>
+                                            <outlet property="titleLabel" destination="vV2-7d-BUh" id="6ry-Xf-C7e"/>
+                                            <outlet property="usernameLabel" destination="zIS-OB-W3c" id="v2M-28-7ls"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

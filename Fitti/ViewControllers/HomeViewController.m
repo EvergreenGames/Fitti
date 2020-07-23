@@ -102,9 +102,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     Post* post = self.posts[indexPath.row];
     
-    TextPostCell* cell = [tableView dequeueReusableCellWithIdentifier:@"TextTextPostCell"];
-    cell.post = post;
-    return cell;
+    if([post.postType isEqualToString:@"text"]){
+        TextPostCell* cell = [tableView dequeueReusableCellWithIdentifier:@"TextPostCell"];
+        cell.post = post;
+        return cell;
+    }
+    else if([post.postType isEqualToString:@"image"]){
+        TextPostCell* cell = [tableView dequeueReusableCellWithIdentifier:@"ImagePostCell"];
+        cell.post = post;
+        return cell;
+    }
+    return nil;
 };
 
 

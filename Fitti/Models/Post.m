@@ -19,6 +19,7 @@
 @dynamic title;
 @dynamic textContent;
 @dynamic image;
+@dynamic aspectRatio;
 @dynamic postType;
 
 + (NSString *)parseClassName{
