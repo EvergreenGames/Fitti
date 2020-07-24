@@ -310,7 +310,7 @@
         <!--Feed-->
         <scene sceneID="6ao-rd-cvS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="10a-0N-ACh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="10a-0N-ACh" customClass="HomeNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feed" selectedImage="house.fill" catalog="system" id="0xz-6M-kS4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LlT-sj-XQp">
