@@ -25,4 +25,8 @@
     self.usernameLabel.text = post.author.username;
 }
 
+- (IBAction)likeAction:(id)sender {
+    
+}
+
 @end

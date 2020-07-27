@@ -10,7 +10,6 @@
 #import "DetailsViewController.h"
 #import "SceneDelegate.h"
 #import "ErrorMessageView.h"
-#import "LocationManager.h"
 #import "TextPostCell.h"
 #import <Parse/Parse.h>
 #import "Post.h"
@@ -20,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSArray<Post*>* posts;
-@property (nonatomic, strong) CLLocation* viewLocation;
+@property (nonatomic, strong) CLPlacemark* viewPlacemark;
 
 @end
 
@@ -36,11 +35,35 @@
     [refreshControl addTarget:self action:@selector(refreshAction:) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:refreshControl atIndex:0];
     
-    [LocationManager startUpdatingLocation]; // move somewhere else for generic view
-    [NSTimer scheduledTimerWithTimeInterval:5.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        self.navigationItem.title = [LocationManager sharedManager].currentPlacemark.name;
-        self.viewLocation = [LocationManager sharedManager].currentLocation;
-    }];
+    if(self.viewLocation){
+        CLGeocoder* geocoder = [CLGeocoder new];
+        [geocoder reverseGeocodeLocation:self.viewLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+            if(error){
+                NSLog(@"Error finding placemark: %@", error.localizedDescription);
+            }
+            else{
+                self.viewPlacemark = placemarks.firstObject;
+                if(self.viewPlacemark.areasOfInterest.count > 0){
+                    self.navigationItem.title = self.viewPlacemark.areasOfInterest.firstObject;
+                }
+                else{
+                    self.navigationItem.title = self.viewPlacemark.name;
+                }
+            }
+        }];
+        [self loadPostsWithCompletion:nil];
+    }
+    else {
+        [LocationManager startUpdatingLocation];
+        [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            self.navigationItem.title = [LocationManager sharedManager].currentPlacemark.name;
+            self.viewLocation = [LocationManager sharedManager].currentLocation;
+            if(self.viewLocation){
+                [timer invalidate];
+                [self loadPostsWithCompletion:nil];
+            }
+        }];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{

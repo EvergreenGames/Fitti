@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocationManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) CLLocation* viewLocation;
 
 @end
 
