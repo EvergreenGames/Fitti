@@ -136,11 +136,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUG-x7-b26">
+                                                    <rect key="frame" x="373" y="110" width="21" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="xUG-x7-b26" secondAttribute="height" multiplier="21:22" id="DZ9-nL-3IO"/>
+                                                    </constraints>
+                                                    <state key="normal" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="likeAction:" destination="69t-ih-3XE" eventType="touchUpInside" id="HZ3-9B-Rt8"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="xUG-x7-b26" firstAttribute="trailing" secondItem="40L-NX-RZm" secondAttribute="trailingMargin" id="5bV-7Z-cI7"/>
                                                 <constraint firstItem="eIZ-wI-b8T" firstAttribute="leading" secondItem="40L-NX-RZm" secondAttribute="leadingMargin" id="5yZ-Rl-ONK"/>
                                                 <constraint firstItem="eIZ-wI-b8T" firstAttribute="top" secondItem="3YK-UK-M2M" secondAttribute="bottom" constant="8" id="74w-tL-h4c"/>
                                                 <constraint firstItem="3YK-UK-M2M" firstAttribute="leading" secondItem="40L-NX-RZm" secondAttribute="leadingMargin" id="9bx-Uh-Q9D"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xUG-x7-b26" secondAttribute="bottom" constant="6" id="E37-Bv-gRb"/>
+                                                <constraint firstItem="xUG-x7-b26" firstAttribute="top" secondItem="3YK-UK-M2M" secondAttribute="bottom" constant="6" id="F4J-Xa-DEB"/>
                                                 <constraint firstItem="gLd-dZ-DAN" firstAttribute="trailing" secondItem="40L-NX-RZm" secondAttribute="trailingMargin" id="Ne9-Zq-wAY"/>
                                                 <constraint firstItem="gLd-dZ-DAN" firstAttribute="leading" secondItem="40L-NX-RZm" secondAttribute="leadingMargin" id="PD1-yh-9lX"/>
                                                 <constraint firstItem="gLd-dZ-DAN" firstAttribute="top" secondItem="40L-NX-RZm" secondAttribute="topMargin" id="XJu-Qi-Ya4"/>
@@ -152,6 +165,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentLabel" destination="3YK-UK-M2M" id="eHN-ar-f4X"/>
+                                            <outlet property="likeButton" destination="xUG-x7-b26" id="eZ5-Uh-Ank"/>
                                             <outlet property="titleLabel" destination="gLd-dZ-DAN" id="L8I-hI-hhz"/>
                                             <outlet property="usernameLabel" destination="eIZ-wI-b8T" id="D7S-VQ-bzb"/>
                                             <segue destination="Tbd-8a-Sg7" kind="show" identifier="DetailSegue" id="lkt-99-cFQ"/>
@@ -443,6 +457,7 @@
         <segue reference="DUj-Yh-Ie7"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="plus" catalog="system" width="128" height="113"/>
     </resources>

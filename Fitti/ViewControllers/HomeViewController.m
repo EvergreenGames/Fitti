@@ -59,14 +59,14 @@
             self.navigationItem.title = [LocationManager sharedManager].currentPlacemark.name;
             self.viewLocation = [LocationManager sharedManager].currentLocation;
             if(self.viewLocation){
-                [timer invalidate];
+                //[timer invalidate];
                 [self loadPostsWithCompletion:nil];
             }
         }];
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
     if (indexPath) {
         [self.tableView deselectRowAtIndexPath:indexPath animated:animated];
@@ -101,8 +101,8 @@
 
 - (void)loadPostsWithCompletion:(void (^)(void))completion{
     PFQuery* query = [Post query];
-    [query whereKey:@"location" nearGeoPoint:[PFGeoPoint geoPointWithLocation:self.viewLocation]];
-    //[query orderByDescending:@"createdAt"];
+    //[query whereKey:@"location" nearGeoPoint:[PFGeoPoint geoPointWithLocation:self.viewLocation]];
+    [query whereKey:@"location" nearGeoPoint:[PFGeoPoint geoPointWithLocation:self.viewLocation] withinMiles:5.0];
     [query includeKey:@"author"];
     query.limit = 20;
     
@@ -112,10 +112,35 @@
         }
         else{
             self.posts = objects;
-            [self.tableView reloadData];
+            
+            NSMutableArray<NSString*>* objectIds = [NSMutableArray new];
+            for (Post* p in self.posts) {
+                [objectIds addObject:p.objectId];
+            }
+            
+            PFQuery* likeQuery = [[[PFUser currentUser] relationForKey:@"likes"] query];
+            [likeQuery whereKey:@"objectId" containedIn:objectIds];
+            [likeQuery findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+                if(error){
+                    NSLog(@"Error fetching likes: %@", error.localizedDescription);
+                }
+                else{
+                    for(Post* p in self.posts){
+                        for(Post* lp in objects){
+                            if([p.objectId isEqualToString:lp.objectId]){
+                                p.userLiked = true;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    [self.tableView reloadData];
+                    if(completion) completion();
+                }
+            }];
+            
         }
     }];
-    if(completion) completion();
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

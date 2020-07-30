@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) float aspectRatio;
 @property (nonatomic, strong) NSString* postType; //"text" or "image"
 
+@property (nonatomic) int likeCount;
+
+@property (nonatomic) BOOL userLiked;
+
 + (PFFileObject*)getPFFileFromImage:(UIImage* _Nullable)image;
 
 @end

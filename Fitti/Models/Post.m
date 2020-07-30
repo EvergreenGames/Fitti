@@ -22,6 +22,10 @@
 @dynamic aspectRatio;
 @dynamic postType;
 
+@dynamic likeCount;
+
+@synthesize userLiked = _userLiked;
+
 + (NSString *)parseClassName{
     return @"Post";
 }
