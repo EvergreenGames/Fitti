@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0568A024D39E4100566919 /* SortingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A05689F24D39E4100566919 /* SortingManager.m */; };
 		8A11365424C6429600BB7583 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A11365324C6429600BB7583 /* DetailsViewController.m */; };
 		8A11365724C7BC1E00BB7583 /* ImagePostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A11365624C7BC1E00BB7583 /* ImagePostCell.m */; };
 		8A1C862224C3CA6100EFBCDB /* TextPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C862124C3CA6100EFBCDB /* TextPostCell.m */; };
@@ -52,6 +53,8 @@
 		370BF55E44B02E3577E54E31 /* Pods_Fitti_FittiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitti_FittiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		472DE8B6BA5C0A6B38B767A2 /* Pods-Fitti-FittiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti-FittiUITests.release.xcconfig"; path = "Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E8EB694581F7AB8C113079E /* Pods-Fitti-FittiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitti-FittiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fitti-FittiUITests/Pods-Fitti-FittiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A05689E24D39E4100566919 /* SortingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortingManager.h; sourceTree = "<group>"; };
+		8A05689F24D39E4100566919 /* SortingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortingManager.m; sourceTree = "<group>"; };
 		8A11365224C6429600BB7583 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		8A11365324C6429600BB7583 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		8A11365524C7BC1E00BB7583 /* ImagePostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagePostCell.h; sourceTree = "<group>"; };
@@ -136,6 +139,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8A0568A124D39E6300566919 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		8A1C861F24C3CA4600EFBCDB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +212,9 @@
 				8AE6891D24BFAF11008D7C95 /* ErrorMessageView.h */,
 				8AE6891E24BFAF11008D7C95 /* ErrorMessageView.m */,
 				8AE6892724C0F574008D7C95 /* LocationManager.h */,
+				8A05689E24D39E4100566919 /* SortingManager.h */,
+				8A05689F24D39E4100566919 /* SortingManager.m */,
+				8A0568A124D39E6300566919 /* Utils */,
 				8AE6892824C0F574008D7C95 /* LocationManager.m */,
 			);
 			path = Fitti;
@@ -486,6 +499,7 @@
 				8AE6892924C0F574008D7C95 /* LocationManager.m in Sources */,
 				8A8FAC5424BD300300719ABB /* AppDelegate.m in Sources */,
 				8A11365424C6429600BB7583 /* DetailsViewController.m in Sources */,
+				8A0568A024D39E4100566919 /* SortingManager.m in Sources */,
 				8A8FAC6524BD300500719ABB /* main.m in Sources */,
 				8AAF69B924C3AD5400C095F9 /* ComposeViewController.m in Sources */,
 				8A8FAC5724BD300300719ABB /* SceneDelegate.m in Sources */,

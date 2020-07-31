@@ -137,9 +137,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUG-x7-b26">
-                                                    <rect key="frame" x="373" y="110" width="21" height="22"/>
+                                                    <rect key="frame" x="372" y="110" width="22" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="xUG-x7-b26" secondAttribute="height" multiplier="21:22" id="DZ9-nL-3IO"/>
+                                                        <constraint firstAttribute="width" secondItem="xUG-x7-b26" secondAttribute="height" multiplier="1:1" id="DZ9-nL-3IO"/>
                                                     </constraints>
                                                     <state key="normal" image="heart" catalog="system"/>
                                                     <connections>
@@ -202,23 +202,37 @@
                                                         <constraint firstAttribute="width" secondItem="QM1-ie-ura" secondAttribute="height" multiplier="1:1" id="kIF-rQ-XKR"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grG-Eg-Yeu">
+                                                    <rect key="frame" x="372" y="424" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="grG-Eg-Yeu" secondAttribute="height" multiplier="1:1" id="iTr-lF-Wd5"/>
+                                                    </constraints>
+                                                    <state key="normal" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="likeAction:" destination="5GZ-Ru-yXc" eventType="touchUpInside" id="zjM-gD-Ag7"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="QM1-ie-ura" firstAttribute="top" secondItem="vV2-7d-BUh" secondAttribute="bottom" constant="8" id="6bh-MY-tZJ"/>
                                                 <constraint firstItem="vV2-7d-BUh" firstAttribute="leading" secondItem="UtB-2z-oTv" secondAttribute="leadingMargin" id="7p0-0t-egJ"/>
+                                                <constraint firstItem="grG-Eg-Yeu" firstAttribute="trailing" secondItem="UtB-2z-oTv" secondAttribute="trailingMargin" id="8Ra-jE-bdR"/>
                                                 <constraint firstItem="zIS-OB-W3c" firstAttribute="leading" secondItem="UtB-2z-oTv" secondAttribute="leadingMargin" id="G6k-v1-LVr"/>
                                                 <constraint firstItem="QM1-ie-ura" firstAttribute="leading" secondItem="UtB-2z-oTv" secondAttribute="leadingMargin" id="Guk-ov-8i6"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="zIS-OB-W3c" secondAttribute="bottom" constant="8" id="KYH-YV-opt"/>
                                                 <constraint firstItem="vV2-7d-BUh" firstAttribute="trailing" secondItem="UtB-2z-oTv" secondAttribute="trailingMargin" id="MnZ-vK-Cbg"/>
                                                 <constraint firstItem="QM1-ie-ura" firstAttribute="trailing" secondItem="UtB-2z-oTv" secondAttribute="trailingMargin" id="VIB-MN-udY"/>
                                                 <constraint firstItem="zIS-OB-W3c" firstAttribute="top" secondItem="QM1-ie-ura" secondAttribute="bottom" constant="8" id="XuF-qZ-Se2"/>
+                                                <constraint firstItem="grG-Eg-Yeu" firstAttribute="top" secondItem="QM1-ie-ura" secondAttribute="bottom" constant="6.5" id="egX-Bv-0o0"/>
                                                 <constraint firstItem="zIS-OB-W3c" firstAttribute="trailing" secondItem="UtB-2z-oTv" secondAttribute="trailingMargin" id="fpb-xG-7dK"/>
                                                 <constraint firstItem="vV2-7d-BUh" firstAttribute="top" secondItem="UtB-2z-oTv" secondAttribute="topMargin" id="pPi-9c-myi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="grG-Eg-Yeu" secondAttribute="bottom" constant="6" id="uuE-Hm-lqw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentImageView" destination="QM1-ie-ura" id="pR6-og-V0b"/>
                                             <outlet property="imageAspectConstraint" destination="kIF-rQ-XKR" id="dFg-BY-1HJ"/>
+                                            <outlet property="likeButton" destination="grG-Eg-Yeu" id="LhW-g4-8XL"/>
                                             <outlet property="titleLabel" destination="vV2-7d-BUh" id="6ry-Xf-C7e"/>
                                             <outlet property="usernameLabel" destination="zIS-OB-W3c" id="v2M-28-7ls"/>
                                             <segue destination="Tbd-8a-Sg7" kind="show" identifier="DetailSegue" id="DUj-Yh-Ie7"/>

@@ -36,6 +36,7 @@
 
 //errors if you press too quickly
 - (IBAction)likeAction:(id)sender {
+    self.likeButton.userInteractionEnabled = false;
     if(self.post.userLiked){
         [self removeLike];
     }
@@ -62,8 +63,10 @@
                     [self.likeButton setImage:[UIImage systemImageNamed:@"heart.fill"] forState:UIControlStateNormal];
                     self.post.userLiked = true;
                 }
+                self.likeButton.userInteractionEnabled = true;
             }];
         }
+        self.likeButton.userInteractionEnabled = true;
     }];
 }
 
@@ -85,8 +88,10 @@
                     [self.likeButton setImage:[UIImage systemImageNamed:@"heart"] forState:UIControlStateNormal];
                     self.post.userLiked = false;
                 }
+                self.likeButton.userInteractionEnabled = true;
             }];
         }
+        self.likeButton.userInteractionEnabled = true;
     }];
 }
 
