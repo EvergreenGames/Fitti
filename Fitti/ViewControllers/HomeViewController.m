@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "DetailsViewController.h"
+#import "SortingManager.h"
 #import "SceneDelegate.h"
 #import "ErrorMessageView.h"
 #import "TextPostCell.h"
@@ -133,6 +134,8 @@
                             }
                         }
                     }
+                    
+                    self.posts = [SortingManager sortPostsHot:self.posts withLocation:self.viewLocation];
                     
                     [self.tableView reloadData];
                     if(completion) completion();

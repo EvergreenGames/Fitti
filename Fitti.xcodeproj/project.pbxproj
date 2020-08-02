@@ -142,6 +142,12 @@
 		8A0568A124D39E6300566919 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8AE6891D24BFAF11008D7C95 /* ErrorMessageView.h */,
+				8AE6891E24BFAF11008D7C95 /* ErrorMessageView.m */,
+				8A05689E24D39E4100566919 /* SortingManager.h */,
+				8A05689F24D39E4100566919 /* SortingManager.m */,
+				8AE6892724C0F574008D7C95 /* LocationManager.h */,
+				8AE6892824C0F574008D7C95 /* LocationManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -209,13 +215,7 @@
 				8A8FAC6024BD300500719ABB /* LaunchScreen.storyboard */,
 				8A8FAC6324BD300500719ABB /* Info.plist */,
 				8A8FAC6424BD300500719ABB /* main.m */,
-				8AE6891D24BFAF11008D7C95 /* ErrorMessageView.h */,
-				8AE6891E24BFAF11008D7C95 /* ErrorMessageView.m */,
-				8AE6892724C0F574008D7C95 /* LocationManager.h */,
-				8A05689E24D39E4100566919 /* SortingManager.h */,
-				8A05689F24D39E4100566919 /* SortingManager.m */,
 				8A0568A124D39E6300566919 /* Utils */,
-				8AE6892824C0F574008D7C95 /* LocationManager.m */,
 			);
 			path = Fitti;
 			sourceTree = "<group>";
