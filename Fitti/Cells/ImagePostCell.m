@@ -40,65 +40,39 @@
             [self.contentImageView invalidateIntrinsicContentSize];
         }
     }];
+    if(self.post.userLiked){
+        [self.likeButton setImage:[UIImage systemImageNamed:@"heart.fill"] forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.likeButton setImage:[UIImage systemImageNamed:@"heart"] forState:UIControlStateNormal];
+    }
 }
+
 - (IBAction)likeAction:(id)sender {
     self.likeButton.userInteractionEnabled = false;
     if(self.post.userLiked){
-        [self removeLike];
+        __weak ImagePostCell* weakSelf = self;
+        [self.post removeLikeWithCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+            if(!error){
+                [self.likeButton setImage:[UIImage systemImageNamed:@"heart"] forState:UIControlStateNormal];
+            }
+            weakSelf.likeButton.userInteractionEnabled = true;
+        }];
     }
     else{
-        [self addLike];
+        __weak ImagePostCell* weakSelf = self;
+        [self.post addLikeWithCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+            if(!error){
+                [weakSelf.likeButton setImage:[UIImage systemImageNamed:@"heart.fill"] forState:UIControlStateNormal];
+            }
+            weakSelf.likeButton.userInteractionEnabled = true;
+        }];
     }
 }
 
-- (void)addLike {
-    PFUser* user = [PFUser currentUser];
-    PFRelation* likeRelation = [user relationForKey:@"likes"];
-    [likeRelation addObject:self.post];
-    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        if(error){
-            NSLog(@"Error liking post: %@", error.localizedDescription);
-        }
-        else{
-            [self.post incrementKey:@"likeCount"];
-            [self.post saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-                if(error){
-                    NSLog(@"Error incrementing post likes: %@", error.localizedDescription);
-                }
-                else{
-                    [self.likeButton setImage:[UIImage systemImageNamed:@"heart.fill"] forState:UIControlStateNormal];
-                    self.post.userLiked = true;
-                }
-                self.likeButton.userInteractionEnabled = true;
-            }];
-        }
-        self.likeButton.userInteractionEnabled = true;
-    }];
-}
 
-- (void)removeLike {
-    PFUser* user = [PFUser currentUser];
-    PFRelation* likeRelation = [user relationForKey:@"likes"];
-    [likeRelation removeObject:self.post];
-    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        if(error){
-            NSLog(@"Error unliking post: %@", error.localizedDescription);
-        }
-        else{
-            [self.post incrementKey:@"likeCount" byAmount:@(-1)];
-            [self.post saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-                if(error){
-                    NSLog(@"Error decrementing post likes: %@", error.localizedDescription);
-                }
-                else{
-                    [self.likeButton setImage:[UIImage systemImageNamed:@"heart"] forState:UIControlStateNormal];
-                    self.post.userLiked = false;
-                }
-                self.likeButton.userInteractionEnabled = true;
-            }];
-        }
-        self.likeButton.userInteractionEnabled = true;
-    }];
-}
+
+
 
 @end

@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *contentImageView;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightConstraint;
@@ -30,6 +31,13 @@
     if(self.post){
         self.titleLabel.text = self.post.title;
         self.usernameLabel.text = self.post.author.username;
+        if(self.post.userLiked){
+            [self.likeButton setImage:[UIImage systemImageNamed:@"heart.fill"] forState:UIControlStateNormal];
+        }
+        else
+        {
+            [self.likeButton setImage:[UIImage systemImageNamed:@"heart"] forState:UIControlStateNormal];
+        }
         if([self.post.postType isEqualToString:@"text"]){
             self.contentLabel.text = self.post.textContent;
             self.textHeightConstraint.active = false;
@@ -46,6 +54,28 @@
                 }
             }];
         }
+    }
+}
+
+- (IBAction)likeAction:(id)sender {
+    self.likeButton.userInteractionEnabled = false;
+    if(self.post.userLiked){
+        __weak DetailsViewController* weakSelf = self;
+        [self.post removeLikeWithCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+            if(!error){
+                [self.likeButton setImage:[UIImage systemImageNamed:@"heart"] forState:UIControlStateNormal];
+            }
+            weakSelf.likeButton.userInteractionEnabled = true;
+        }];
+    }
+    else{
+        __weak DetailsViewController* weakSelf = self;
+        [self.post addLikeWithCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+            if(!error){
+                [weakSelf.likeButton setImage:[UIImage systemImageNamed:@"heart.fill"] forState:UIControlStateNormal];
+            }
+            weakSelf.likeButton.userInteractionEnabled = true;
+        }];
     }
 }
 

@@ -44,6 +44,54 @@
     return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
 }
 
+- (void)addLikeWithCompletion:(PFBooleanResultBlock)completion {
+    PFUser* user = [PFUser currentUser];
+    PFRelation* likeRelation = [user relationForKey:@"likes"];
+    [likeRelation addObject:self];
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if(error){
+            NSLog(@"Error liking post: %@", error.localizedDescription);
+            completion(false, error);
+        }
+        else{
+            [self incrementKey:@"likeCount"];
+            [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                if(error){
+                    NSLog(@"Error incrementing post likes: %@", error.localizedDescription);
+                    completion(false, error);
+                }
+                else{
+                    completion(true, nil);
+                    self.userLiked = true;
+                }
+            }];
+        }
+    }];
+}
 
+- (void)removeLikeWithCompletion:(PFBooleanResultBlock)completion {
+    PFUser* user = [PFUser currentUser];
+    PFRelation* likeRelation = [user relationForKey:@"likes"];
+    [likeRelation removeObject:self];
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if(error){
+            NSLog(@"Error unliking post: %@", error.localizedDescription);
+            completion(false, error);
+        }
+        else{
+            [self incrementKey:@"likeCount" byAmount:@(-1)];
+            [self saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                if(error){
+                    NSLog(@"Error decrementing post likes: %@", error.localizedDescription);
+                    completion(false, error);
+                }
+                else{
+                    completion(true, nil);
+                    self.userLiked = false;
+                }
+            }];
+        }
+    }];
+}
 
 @end
