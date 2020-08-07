@@ -31,7 +31,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
+        
     UIRefreshControl* refreshControl = [UIRefreshControl new];
     [refreshControl addTarget:self action:@selector(refreshAction:) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:refreshControl atIndex:0];
@@ -165,6 +165,20 @@
     }
     return nil;
 };
+/*
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.posts.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView* view = [UIView new];
+    view.backgroundColor = UIColor.clearColor;
+    return view;
+}*/
 
 
 #pragma mark - Navigation

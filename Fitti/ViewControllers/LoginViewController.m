@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -24,6 +25,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.usernameField.layer.cornerRadius=8;
+    self.usernameField.layer.borderWidth=1;
+    self.usernameField.layer.borderColor=UIColor.lightGrayColor.CGColor;
+    self.usernameField.layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0);
+    self.passwordField.layer.cornerRadius=8;
+    self.passwordField.layer.borderWidth=1;
+    self.passwordField.layer.borderColor=UIColor.lightGrayColor.CGColor;
+    self.passwordField.layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0);
+    
+    self.loginButton.layer.cornerRadius=8;
+    self.loginButton.clipsToBounds=true;
+
     //TESTING
     //TODO: Present this in a better way
     [LocationManager.sharedManager.locManager requestWhenInUseAuthorization];
@@ -39,6 +52,20 @@
 - (IBAction)dismissKeyboardAction:(id)sender {
     [self.view endEditing:YES];
 }
+
+- (IBAction)usernameSelectedAction:(id)sender {
+    ((UITextField*)sender).layer.borderColor=[UIColor colorWithRed:0.933 green:0.316 blue:0.335 alpha:1].CGColor;
+}
+- (IBAction)usernameDeselectedAction:(id)sender {
+    ((UITextField*)sender).layer.borderColor=UIColor.lightGrayColor.CGColor;
+}
+- (IBAction)passwordSelectedAction:(id)sender {
+    ((UITextField*)sender).layer.borderColor=[UIColor colorWithRed:0.933 green:0.316 blue:0.335 alpha:1].CGColor;
+}
+- (IBAction)passwordDeselectedAction:(id)sender {
+    ((UITextField*)sender).layer.borderColor=UIColor.lightGrayColor.CGColor;
+}
+
 
 - (void)registerUser {
     PFUser* newUser = [PFUser new];

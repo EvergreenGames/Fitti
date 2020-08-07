@@ -32,6 +32,13 @@ NSInteger comparePosts(id p1, id p2, void *context){
         return NSOrderedSame;
 }
 
+//l = likecount
+//t = time since now
+//d = distance
+//p1 = time scaling
+//p2 = distance scaling
+//score = l/t^p1+d^p2
+
 + (float) scoreForPost:(Post*)post withLocation:(CLLocation*)point{
     double dist = [post.location distanceInMilesTo:[PFGeoPoint geoPointWithLocation:point]]*SORT_DIST;
     return (post.likeCount-1)/pow(([post.createdAt timeIntervalSinceNow]/3600)+2,SORT_GRAVITY)+pow(dist,SORT_DIST_RAMP);

@@ -7,13 +7,19 @@
 //
 
 #import "TextPostCell.h"
+#import "DateTools.h"
 
 @interface TextPostCell ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeAgoLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
+@property (weak, nonatomic) IBOutlet UILabel *likeCounter;
+
+@property (weak, nonatomic) IBOutlet UIView *clippingView;
 
 @end
 
@@ -25,6 +31,9 @@
     self.titleLabel.text = post.title;
     self.contentLabel.text = post.textContent;
     self.usernameLabel.text = post.author.username;
+    //self.locationLabel = self.post.locationName;
+    self.timeAgoLabel.text = post.createdAt.shortTimeAgoSinceNow;
+    
     if(self.post.userLiked){
         [self.likeButton setImage:[UIImage systemImageNamed:@"heart.fill"] forState:UIControlStateNormal];
     }
@@ -32,6 +41,17 @@
     {
         [self.likeButton setImage:[UIImage systemImageNamed:@"heart"] forState:UIControlStateNormal];
     }
+    self.likeCounter.text = [NSString stringWithFormat:@"%i", self.post.likeCount];
+
+    self.contentView.backgroundColor = UIColor.clearColor;
+    self.contentView.layer.shadowOpacity = 0.3;
+    self.contentView.layer.shadowRadius = 4;
+    self.contentView.layer.shadowColor = UIColor.grayColor.CGColor;
+    self.contentView.layer.shadowOffset = CGSizeMake(3, 3);
+    
+    self.clippingView.layer.cornerRadius = 10;
+    self.clippingView.backgroundColor = UIColor.whiteColor;
+    self.clippingView.layer.masksToBounds = true;
 }
 
 //errors if you press too quickly
