@@ -165,19 +165,13 @@
     }
     return nil;
 };
-/*
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.posts.count;
-}
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 0;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView* view = [UIView new];
-    view.backgroundColor = UIColor.clearColor;
-    return view;
+/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell* post = [tableView cellForRowAtIndexPath:indexPath];
+    [tableView endUpdates];
+    //[UIView animateWithDuration:2.0 animations:^{
+        post.frame = CGRectMake(post.frame.origin.x, post.frame.origin.y-15, post.frame.size.width, post.frame.size.height+30);
+    //}];
 }*/
 
 

@@ -10,6 +10,7 @@
 #import "SceneDelegate.h"
 #import <Parse/Parse.h>
 #import "LocationManager.h"
+#import "ErrorMessageView.h"
 
 @interface LoginViewController ()
 
@@ -77,6 +78,7 @@
         //TODO: check username is taken
         if(error){
             NSLog(@"Error registering: %@", error.localizedDescription);
+            [ErrorMessageView errorMessageWithString:@"There was an issue creating your account. Please try again."];
         }
         else{
             [self loginUserWithUsername:newUser.username password:newUser.password];
@@ -86,10 +88,13 @@
 
 - (void)loginUserWithUsername:(NSString*)username password:(NSString*)password {
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * _Nullable user, NSError * _Nullable error) {
-        //TODO: check username/pass is blank
+        if(username.length==0 || password.length==0){
+            [ErrorMessageView errorMessageWithString:@"Please enter a username and password"];
+        }
         if(error)
         {
             NSLog(@"Error logging in: %@", error.localizedDescription);
+            [ErrorMessageView errorMessageWithString:@"Unable to log in. Please try again."];
         }
         else {
             [self switchToMainView];

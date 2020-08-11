@@ -25,7 +25,11 @@
 }
 
 - (IBAction)cancelAction:(id)sender {
-    //TODO: modality
+    self.titleField.text = @"";
+    self.contentField.text = @"";
+    self.contentImageView.image = nil;
+    [self.view endEditing:YES];
+    [self.navigationController.tabBarController setSelectedIndex:0];
 }
 
 - (IBAction)postAction:(id)sender {
@@ -36,7 +40,9 @@
         else {
             self.titleField.text = @"";
             self.contentField.text = @"";
+            self.contentImageView.image = nil;
             [self.view endEditing:YES];
+            [self.navigationController.tabBarController setSelectedIndex:0];
         }
     }];
 }
