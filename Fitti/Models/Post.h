@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* postID;
 @property (nonatomic) PFGeoPoint* location;
 
+@property (nonatomic, strong) NSString* locationName;
 @property (nonatomic, strong) PFUser* author;
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSString* textContent;

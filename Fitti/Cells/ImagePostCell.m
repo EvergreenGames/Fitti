@@ -39,7 +39,7 @@
     [self.imageAspectConstraint setConstant:self.post.aspectRatio];
     self.contentImageView.file = post.image;
     self.usernameLabel.text = post.author.username;
-    //self.locationLabel = post.locationName;
+    self.locationLabel.text = post.locationName;
     self.timeAgoLabel.text = post.createdAt.shortTimeAgoSinceNow;
     [self.contentImageView loadInBackground:^(UIImage * _Nullable image, NSError * _Nullable error) {
         if(error){

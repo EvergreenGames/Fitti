@@ -15,6 +15,7 @@
 @dynamic postID;
 @dynamic location;
 
+@dynamic locationName;
 @dynamic author;
 @dynamic title;
 @dynamic textContent;

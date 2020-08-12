@@ -31,7 +31,7 @@
     self.titleLabel.text = post.title;
     self.contentLabel.text = post.textContent;
     self.usernameLabel.text = post.author.username;
-    //self.locationLabel = self.post.locationName;
+    self.locationLabel.text = self.post.locationName;
     self.timeAgoLabel.text = post.createdAt.shortTimeAgoSinceNow;
     
     if(self.post.userLiked){

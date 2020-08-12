@@ -52,6 +52,7 @@
     post.location = [PFGeoPoint geoPointWithLocation:LocationManager.sharedManager.currentLocation];
     post.author = PFUser.currentUser;
     
+    post.locationName = @"Sunnyvale";
     post.title = self.titleField.text;
     post.textContent = self.contentField.text;
     post.image = nil;
